@@ -1,0 +1,97 @@
+<h4>How many seats are you looking for? </h4>
+
+<p><b>New Zealand tour of Australia 3rd T20</b></p>
+<p>Wed 2nd Feb | 7:00 PM</p>
+<hr>
+<P>Please select the category of your choice</P>
+
+
+<mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile
+        *ngFor="let tile of tiles"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color">
+      {{tile.text}}
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <hr>
+
+<div>
+  <h3>Ticket Fare</h3>
+<mat-tab-group animationDuration="1500ms">
+  <mat-tab label="Right">45$ for premium seat</mat-tab>
+  <mat-tab label="Left">35$ for economy seats</mat-tab>
+  <mat-tab label="Front">60$ for luxury seats</mat-tab>
+  <mat-tab label="Back">35$ for economy seats</mat-tab>
+</mat-tab-group>
+</div>
+
+
+
+<!-- <div>
+<label for="demo-optional-label-group">Pick the text for the optional label</label>
+<mat-radio-group
+  id="demo-optional-label-group"
+  class="demo-radio-group"
+  [(ngModel)]="optionalLabelText"
+  (ngModelChange)="updateOptionalLabel()">
+  <mat-radio-button
+    class="demo-radio-button"
+    *ngFor="let optionalLabelTextChoice of optionalLabelTextChoices"
+    [value]="optionalLabelTextChoice">
+    {{optionalLabelTextChoice}}
+  </mat-radio-button>
+</mat-radio-group>
+<mat-stepper class="demo-stepper" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Fill out your name</ng-template>
+      <mat-form-field class="demo-form-field" appearance="fill">
+        <mat-label>Name</mat-label>
+        <input
+          matInput
+          placeholder="Last name, First name"
+          formControlName="firstCtrl"
+          required
+        />
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step
+    [stepControl]="secondFormGroup"
+    label="Fill out your address"
+    optional>
+    <form [formGroup]="secondFormGroup">
+      <mat-form-field appearance="fill">
+        <mat-label>Address</mat-label>
+        <input
+          matInput
+          formControlName="secondCtrl"
+          placeholder="Ex. 1 Main St, New York, NY"
+        />
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p>You are now done.</p>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-stepper>
+</div> -->
+
+
+
+  
